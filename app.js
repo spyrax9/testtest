@@ -20,7 +20,8 @@ var asamplaca;
 function getasamPlaca(){
 asamplaca = document.getElementById("boxktiba").value;
 console.log(asamplaca);
-var api = 'http://api.weatherapi.com/v1/current.json?key=d8d0ddba9b54406bb6c81332202411&q='+asamplaca;
+var proxy = 'https://cors-anywhere.herokuapp.com/';
+var api = proxy+'http://api.weatherapi.com/v1/current.json?key=d8d0ddba9b54406bb6c81332202411&q='+asamplaca;
 console.log(api);
 fetch(api)
    .then(response => {
